@@ -1,3 +1,4 @@
+#! https://zhuanlan.zhihu.com/p/626994029
 # Time Series Basics
 
 ## Overview of Time Series Characters
@@ -52,9 +53,9 @@ Assumptions:
 
 $quakes = 9.19 + 0.543 lag1$
 
-$S = 6.12239 $
+$S = 6.12239$
 
-$R-Sq = 29.7% $
+$R-Sq = 29.7%$
 
 $R-Sq(adj) = 29.0%$
 
@@ -281,7 +282,7 @@ $$
 
 ## R Code for Two Examples in Lessons 1.1 and 1.2 
 
-For the pdf version, view on [output]()
+For the pdf version, view on [output](https://github.com/YikunHan42/psu-stat-510/blob/main/Lesson%201/Times-Series-Basics.pdf)
 
 ```r
 x=scan("quakes.dat")
