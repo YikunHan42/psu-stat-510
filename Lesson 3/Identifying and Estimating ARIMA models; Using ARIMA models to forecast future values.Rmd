@@ -1,0 +1,41 @@
+---
+title: "MA Models, Partial Autocorrelation, Notational Conventions"
+documentclass: ctexart
+output:
+  rticles::ctex:
+    fig_caption: yes
+    number_sections: yes
+    toc: no
+date: "2023-05-06"
+always_allow_html: yes
+---
+
+```{r}
+library("astsa")
+```
+
+```{r}
+xerie = scan("eriedata.dat") #reads the data
+xerie = ts (xerie) # makes sure xerie is a time series object
+plot (xerie, type = "b") # plots xerie
+```
+
+```{r}
+acf2 (xerie) # author’s routine for graphing both the ACF and the PACF
+```
+
+```{r}
+sarima (xerie, 1, 0, 0) # this is the AR(1) model estimated with the author’s routine
+```
+
+```{r}
+sarima (xerie, 0, 0, 1) # this is the incorrect MA(1) model
+```
+
+```{r}
+sarima (xerie, 1, 0, 1) # this is the over-parameterized ARMA(1,1) model 
+```
+
+```{r}
+sarima.for(xerie, 4, 1, 0, 0) # four forecasts from an AR(1) model for the erie data 
+```
